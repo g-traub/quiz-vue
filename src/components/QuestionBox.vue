@@ -9,11 +9,11 @@
     <hr class="my-4">
 
     <p>
-     Answers
+     {{currentAnswers}}
     </p>
 
-    <b-button variant="primary" href="#">Submit</b-button>
-    <b-button @click="next" variant="success" href="#">Next</b-button>
+    <b-button  variant="primary" >Submit</b-button>
+    <b-button @click="next" variant="success">Next</b-button>
   </b-jumbotron>
 </div>
 </template>
@@ -22,7 +22,9 @@
 export default {
   props:{
     currentQuestion: Object,
-    next: Function
+    currentAnswers: Array,
+    next: Function,
+    shuffleAnswers: Function
   }
 }
 </script>
